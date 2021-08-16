@@ -1,0 +1,42 @@
+body{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.twitt{
+    margin-left: 270px;
+    margin-top: 10px;
+    width: 55px;
+}
+.connexion{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+}
+h1{
+    text-align: left;
+    margin-left: 280px;
+    width: 10em;
+}
+input{
+    padding: 20px;
+    width: 300px;
+}
+input::placeholder{
+    font-size: 16px;
+}
+input[type=submit] {
+    background-color: rgb(29, 161, 242);
+    opacity: 0.5;
+    font-size: 17px;
+    color: white;
+    padding: 15px;
+    width: 350px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+}
+a{
+    font-family: inherit;
+    font-size: 14px;
+    color: rgb(27, 149, 224);
+}
