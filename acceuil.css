@@ -1,34 +1,176 @@
-body{
+*{
     margin: 0px;
-    font-family: Arial, sans-serif;
-
 }
 
 
+.app{
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
 header{
-    position: absolute;   
-    
+    position: absolute;     
     width: 50%;
     height: 100%;
     left: 50%;
+    top: 200px;
+    padding-left: 20px;
 
+}
+
+h1{
+    font-family: inherit;
+    font-size: 4.5rem;
+}
+
+h3{
+    font-size: 31px;
 }
 
 .blue{
     position: absolute;
     background: #1DA1F2;
     width: 50%;
-    height: 100%;
+    height: 2500%;
+    
 }
 
-img{
+.logo-blanc{
     position: absolute;
-    width: 500px;
-    bottom: 400px;
-    left: 100px;
+    width: 700px;
+    bottom: 200px;
+    left: 150px;
+}
+.logo-bleu{
+    position: absolute;
+    width: 80px;
+    bottom: 100px;
 }
 
+.option{
+    font-family: Arial, sans-serif;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    top: 430px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "bt"
+        "bt2"
+        "trai"
+        "tel";
+}
 
+.bt{
+    font-family: "bt";
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 10px 60px 10px 50px;
+    width: 300px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    
+}
+
+.bt:hover{
+    background-color: rgba(204, 204, 204, 0.233);
+    transition: 1s;
+
+}
+
+.bt1:hover{
+    background-color: rgba(204, 204, 204, 0.267);
+    transition: 1s;
+
+}
+
+.bt3:hover{
+    background-color: #087ec7;
+    transition: 1s;
+
+}
+.bt4:hover{
+    background-color: rgba(204, 204, 204, 0.267);
+    transition: 1s;
+}
+
+.bt1{
+    font-family: "bt1";
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 10px 60px 10px 50px;
+    width: 300px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+p{
+    position: absolute;
+    font-family: Arial, sans-serif;
+    bottom: 20px;
+    left: 150px;
+}
+
+.bt3{
+    position: absolute;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 0px;
+    padding: 10px 0px 10px 0px;
+    width: 370px;
+    border-radius: 20px;
+    background: #1DA1F2;
+    border: 1px solid #ccc;
+    color: white;
+    cursor: pointer;
+    top: 200px;
+}
+
+span{
+    position: absolute;
+    font-size: 10px;
+    top: 250px;
+    left: 60px;
+}
+
+.trai{
+    position: absolute;
+    right: 1000px; 
+    top: 200px;
+    font-family: "trai";
+}
+
+.connect{
+    font-family: Arial, sans-serif;
+    position: relative;
+    left: 50%;
+    top: 750px;
+    padding-left: 50px;
+}
+
+.bt4{
+    position: absolute;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 10px 60px 10px 50px;
+    width: 300px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+}
 
 footer{
 
@@ -37,7 +179,7 @@ footer{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 50px;
     color: black;
 }
 
