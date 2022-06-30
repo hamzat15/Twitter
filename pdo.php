@@ -18,7 +18,7 @@ class inscription
     $date = $_POST["birthday"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $pseudo = $_POST["pseudo"];
+    $pseudo = "@".$_POST["pseudo"];
     $picture = "default.png";
 
    if(!empty($_POST))

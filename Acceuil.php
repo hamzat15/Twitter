@@ -13,17 +13,17 @@
 <body>
     <div class="app">
         <div class="blue">
-            <img class="logo-blanc" src="./Untitled.png" alt=""></img>
+            <img class="logo-blanc" src="./assets/Untitled.png" alt=""></img>
         </div>
         <header>
-            <img class="logo-bleu" src="./logotwitter.png" alt></img>
+            <img class="logo-bleu" src="./assets/logotwitter.png" alt></img>
             <h1>Ca se passe<br> maintenant</h1><br><br>
             <h3>Rejoignez Twitter dès aujourd'hui.</h3>
         </header>
         <div class="option">
             <input type="submit" value="S'inscrire avec Google" class="bt">
             <input type="submit" value="S'inscrire avec Apple" class="bt1">
-
+            
             <div class="trai">
                 <p>ou</p>
             </div>
@@ -36,7 +36,14 @@
         </div>
         <div class="connect">
             <h4>Vous avez déjà un compte ?</h4><br>
-            <input class="bt4" type="submit" value="S'inscrire avec Apple">
+            <input class="bt4" onClick="AfficherMasquer()" type="button" value="Se connecter" >
+        </div>
+        <div id="divacacher" style="display:none;">
+            <input class="cross" onClick="delet()" type="button" value="X">
+            <input type="text" id="name" name="name" placeholder="password" require>
+            <input type="text" id="password" name="password" placeholder="password" require>
+            <a href="./register/register.php">Accueil</a>
+
         </div>
 
         <footer>
@@ -65,6 +72,7 @@
             </ul>
         </footer>
     </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>
