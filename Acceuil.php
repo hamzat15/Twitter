@@ -9,12 +9,42 @@
     <link rel="short icon" href="./assets/logotwitter.png"/> 
 </head>
 <body>
-    <div class="connection" id="divcacher" style="display:none;"></div>
+    
+    <div class="insc" id="inscript">
+        </div>
+        <div class="inscf" id="forum">
+            <div class="delete">
+                <input class="dell" onClick="delet2()" type="button" value="X">
+            </div>
+            <img class="img" src="./assets/logotwitterC.png" alt=""></img>  
+            <h3 style="margin-left: 100px; position:relative; bottom:20px;">Créer votre compte.</h3>
+            <div class="form">
+                <form method="POST" action="" name="formulaire" >
+                    <div class="sec">
+                        <input type="text" id="Nom" name="nom" placeholder="Nom et prenom" required>
+                    </div>
+                    <div class="sec">
+                        <input type="text" id="email" name="email" placeholder="Votre@email.fr" required>
+                    </div>
+                    <div class="sec">
+                        <input type="text" id="password" name="password" placeholder="******" required>
+                    </div> 
+                    <div class="sec">
+                    <input type="text" id="pseudo" name="pseudo" placeholder="pseudo" required>
+                </div>
+                <div class="sec">
+                    <input type="date" id="birthday" name="birthday" required>
+                </div>
+                <input class="svt" type="submit" id="submit" value="Suivant" required> 
+            </form>
+        </div>
+        </div>
+        <div class="connection" id="divcacher" style="display:none;"></div>
         <div class="opt" id="opt"  style="display:none;"> 
             <div class="delete">
                 <input class="del" onClick="delet()" type="button" value="X">
             </div>
-            <img class="logo-bleu" src="./assets/logotwitter.png" alt></img>  
+            <img class="logo-bleu" src="./assets/logotwitter.png" alt></img>
             <div class="left">
                 <h3>Connectez vous a<br> Twitter</h3>
                 <div class="btnT">
@@ -29,10 +59,10 @@
                     <input  type="submit" value="Suivant">
                 </div>
                 <div>
-                    <p>Vous n'avez pas de compte ? <a href="">Inscrivez-vous</a></p>
+                    <p>Vous n'avez pas de compte ? <a href="Acceuil.php" onClick="inscription();">Inscrivez-vous</a></p>
                 </div>
             </div>
-    </div>
+        </div>
         <div class="main">
             <div class="leftside">
                 <img src="./assets/Untitled.png" alt="" srcset="">
@@ -56,7 +86,7 @@
                         ou
                     </div>
                     <div class="btnTel">
-                        <input type="submit" value="Creer un compte">
+                        <input onClick="inscription()" type="submit" value="Creer un compte">
                     </div>
                     <div class="spanSign">
                         <span>
@@ -71,8 +101,8 @@
             </div>
         </div>     
         <div class="footer">
-        <span class="span">00kngrliniotnùotihigùhoipjt0</span>
+            <span class="span">00kngrliniotnùotihigùhoipjt0</span>
         </div>
         <script src="./index.js"></script>
     </body>
-</html>
+    </html>

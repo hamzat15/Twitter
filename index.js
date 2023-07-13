@@ -1,3 +1,5 @@
+
+//Masquer et afficher la partie connecter via le button se connecter
 const AfficherMasquer = () => {
   divInfo = document.getElementById("divcacher");
   if (divInfo.style.display == "none") divInfo.style.display = "block";
@@ -12,6 +14,20 @@ const AfficherMasquer = () => {
 };
 AfficherMasquer();
 
+//Masquer et afficher la partie inscription via le button s'inscrire
+const inscription = () => {
+  insc = document.getElementById("inscript");
+  if (insc.style.display == "none") insc.style.display = "block";
+  else insc.style.display = "none";
+
+  forum = document.getElementById("forum");
+  if (forum.style.display == "none") forum.style.display = "block";
+  else forum.style.display = "none";
+}
+inscription();
+
+
+
 const delet = () => {
   if (divInfo.style.display == "none") divInfo.style.display = "block";
   else divInfo.style.display = "none";
@@ -22,3 +38,14 @@ const delet = () => {
 
 };
 delet();
+
+const delet2 = () => {
+  if (insc.style.display == "none") insc.style.display = "block";
+  else insc.style.display = "none";
+  if (forum.style.display == "none") forum.style.display = "block";
+  else forum.style.display = "none";
+
+  body.style.removeProperty("overflow");
+
+};
+delete2();
