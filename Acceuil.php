@@ -19,15 +19,15 @@
             <img class="img" src="./assets/logotwitterC.png" alt=""></img>  
             <h3 style="margin-left: 100px; position:relative; bottom:20px;">Créer votre compte.</h3>
             <div class="form">
-                <form method="POST" action="" name="formulaire" >
+                <form method="POST" action="./traitement.php" name="formulaire" >
                     <div class="sec">
-                        <input type="text" id="Nom" name="nom" placeholder="Nom et prenom" required>
+                        <input type="text" id="nom" name="nom" placeholder="Nom et prenom" required>
                     </div>
                     <div class="sec">
                         <input type="text" id="email" name="email" placeholder="Votre@email.fr" required>
                     </div>
                     <div class="sec">
-                        <input type="text" id="password" name="password" placeholder="******" required>
+                        <input type="password" id="pass" name="pass" placeholder="******" required>
                     </div> 
                     <div class="sec">
                     <input type="text" id="pseudo" name="pseudo" placeholder="pseudo" required>
@@ -35,7 +35,7 @@
                 <div class="sec">
                     <input type="date" id="birthday" name="birthday" required>
                 </div>
-                <input class="svt" type="submit" id="submit" value="Suivant" required> 
+                <input class="svt" type="submit" name="submit" id="submit" value="Suivant" required> 
             </form>
         </div>
         </div>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="connect">
                     <h4>Vous avez déjà un compte ?</h4><br>
-                    <input onClick="AfficherMasquer()" type="button" value="Se connecter" >
+                    <input style="font-weight:bold; color:#1DA1F2;"onClick="AfficherMasquer()" type="button" value="Se connecter" >
                 </div>      
             </div>
         </div>     
