@@ -8,8 +8,7 @@
     <title>Twitter</title>
     <link rel="short icon" href="./assets/logotwitter.png"/> 
 </head>
-<body>
-    
+<body>    
     <div class="insc" id="inscript">
         </div>
         <div class="inscf" id="forum">
@@ -24,7 +23,7 @@
                         <input type="text" id="nom" name="nom" placeholder="Nom et prenom" required>
                     </div>
                     <div class="sec">
-                        <input type="text" id="email" name="email" placeholder="Votre@email.fr" required>
+                        <input type="email" id="email" name="email" placeholder="Votre@email.fr" required>
                     </div>
                     <div class="sec">
                         <input type="password" id="pass" name="pass" placeholder="******" required>
@@ -47,17 +46,19 @@
             <img class="logo-bleu" src="./assets/logotwitter.png" alt></img>
             <div class="left">
                 <h3>Connectez vous a<br> Twitter</h3>
-                <div class="btnT">
+                <form method="POST" action="./logintraite.php">
+                    <div class="btnT">
                     <div>
-                        <input type="text" id="name" name="name" placeholder="email" require>
+                        <input type="email" id="emaill" name="email" placeholder="email" required>
                     </div>
                     <div>
-                        <input type="text" id="password" name="password" placeholder="password" require>
+                        <input type="password" id="password" name="password" placeholder="password" required>
                     </div>
-                </div>
-                <div class="btnConnect">
-                    <input  type="submit" value="Suivant">
-                </div>
+                    </div>
+                    <div class="btnConnect">
+                        <input  type="submit" value="Suivant" name="ok">
+                    </div>
+                </form>
                 <div>
                     <p>Vous n'avez pas de compte ? <a href="Acceuil.php" onClick="inscription();">Inscrivez-vous</a></p>
                 </div>
@@ -104,5 +105,5 @@
             <span class="span">00kngrliniotnùotihigùhoipjt0</span>
         </div>
         <script src="./index.js"></script>
-    </body>
-    </html>
+</body>
+</html>
