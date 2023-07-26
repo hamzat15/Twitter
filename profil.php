@@ -1,44 +1,5 @@
 <?php
-$conn = new PDO("mysql:host=localhost;dbname=twitter", "hamzat", "WEB@C");
-if(isset($_SESSION['user_id'])|| true){
-   if(isset($_FILES['picture']) AND !empty($_FILES['picture']['name'])) {
-      $tailleMax = 2097152;
-     $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
-     if($_FILES['picture']['size'] <= $tailleMax) {
-        $extensionUpload = strtolower(substr(strrchr($_FILES['picture']['name'], '.'), 1));
-        if(in_array($extensionUpload, $extensionsValides)) {
-          
-         $dossier = 'membres/avatars/';
-         $fichier = basename($_FILES['picture']['name']);
-         if(move_uploaded_file($_FILES['picture']['tmp_name'], $dossier.$fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
-         {
-            try{       
-               $updateavatar = $conn->prepare("UPDATE info_users SET photo = :avatar  WHERE id_users ='".$_SESSION['user_id']."'");
-               $updateavatar->execute(array(
-               'avatar' => $_FILES['picture']['name'],
-               ));
-              header('Location: login.php?id='.$_SESSION['user_id']);
-            }
-            catch (PDOException $e){
-            print "Erreur !: " . $e->getMessage() . "<br/>";
-            die();
-            }
-         }
-         else 
-         {
-            echo 'Echec de l\'upload !';
-         }
 
-          
-        } else {
-           echo "Votre photo de profil doit être au format jpg, jpeg, gif ou png";
-        }
-     } else {
-        echo "Votre photo de profil ne doit pas dépasser 2Mo";
-    }
-}
-
-}
     $headertext = '
     <div class="back" id="back">
     </div>
@@ -46,6 +7,7 @@ if(isset($_SESSION['user_id'])|| true){
         <div class="delete">
             <input class="del" onClick="delet()" type="button" value="X">
         </div>
+
         <form method="POST" enctype="multipart/form-data">
             <label for="fileUpload">Avatar :</label>
             <input type="file" name="picture" /><br><br>
@@ -61,11 +23,12 @@ if(isset($_SESSION['user_id'])|| true){
     <div class="btnedit">
         <input onClick="edit()" type="submit"  value="éditer le profil"/>
     </div>
-    '
-?>
-<?php
-    include('test.php');
-?>
+    ';
+ ?>
+ <?php
+     include('test.php');
+
+ ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -78,3 +41,47 @@ if(isset($_SESSION['user_id'])|| true){
 <script src="./profil.js"></script>
 </body>
 </html>
+
+<?php
+$idusers = $_SESSION["user_id"];
+
+$conn = new PDO("mysql:host=localhost;dbname=twitter", "hamzat", "WEB@C");
+if(isset($_SESSION["user_id"])|| true){
+   if(isset($_FILES['picture']) AND !empty($_FILES['picture']['name'])) {
+      $tailleMax = 2097152;
+     $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
+     if($_FILES['picture']['size'] <= $tailleMax) {
+        $extensionUpload = strtolower(substr(strrchr($_FILES['picture']['name'], '.'), 1));
+        if(in_array($extensionUpload, $extensionsValides)) {
+         $dossier = 'loginn/membres/avatars/';
+         $fichier = basename($_FILES['picture']['name']);
+        if(move_uploaded_file($_FILES['picture']['tmp_name'], $dossier.$fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+        {
+            try{       
+               $updateavatar = $conn->prepare("UPDATE info_users SET photo = :avatar  WHERE id_users = '".$idusers."'");
+               $updateavatar->execute(array(
+               'avatar' => $_FILES['picture']['name'],));
+              header('Location: profil.php?id='.$_SESSION['user_id']);
+              echo "transfere reussie !!!!";
+            }
+            catch (PDOException $e){
+            print "Erreur !: " . $e->getMessage() . "<br/>";
+            die();
+            }
+        }
+        else 
+        {
+            echo 'Echec de l\'upload !';
+        }
+         
+        } else {
+           echo "Votre photo de profil doit être au format jpg, jpeg, gif ou png";
+        }
+    } else {
+        echo "Votre photo de profil ne doit pas dépasser 2Mo";
+    }
+}
+
+}
+
+?>

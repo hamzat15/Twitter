@@ -28,7 +28,7 @@ class connect{
                 $reponse = mysqli_fetch_array($exec_requete);
                 if($reponse)
                 {
-                    $_SESSION["user_id"] = $reponse["id"];
+                    $_SESSION["user_id"] = $reponse["id_users"];
                     $_SESSION["nom"] = $reponse["nom"];
                     $_SESSION["email"] = $reponse["email"];
                     $_SESSION["pseudo"] = $reponse["pseudo"];
