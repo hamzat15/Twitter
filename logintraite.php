@@ -21,7 +21,9 @@ class connect{
 
             if($email !== "" && $password !== "")
             {
-                $requete = "SELECT * FROM users WHERE email = '".$email."' AND mdp = '".$password."' ";
+               // $requete = "SELECT * FROM users WHERE email = '".$email."' AND mdp = '".$password."'";
+                $requete = "SELECT * FROM users INNER JOIN info_users ON users.id = info_users.id_users WHERE email = '".$email."' AND mdp = '".$password."'";
+
                 $exec_requete = mysqli_query($db,$requete);
                 $reponse = mysqli_fetch_array($exec_requete);
                 if($reponse)
@@ -30,7 +32,8 @@ class connect{
                     $_SESSION["nom"] = $reponse["nom"];
                     $_SESSION["email"] = $reponse["email"];
                     $_SESSION["pseudo"] = $reponse["pseudo"];
-
+                    $_SESSION["photo"] = $reponse["photo"];
+                    $_SESSION["biographie"] = $reponse["biographie"];
 
 
                     header("Location: login.php");

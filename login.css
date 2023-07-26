@@ -16,7 +16,7 @@ body{
 }
 
 .left{
-    width: 30%;
+    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -26,7 +26,7 @@ body{
 .middle{
     display: flex;
     justify-content: center;
-    width: 49%;
+    width: 54%;
     background-color: white;
     border-left: solid 1px rgb(224, 222, 222);
     border-right: solid 1px  rgb(224, 222, 222);
@@ -60,11 +60,12 @@ a{
     color: black;
     gap: 5px;
     width: 10rem;  
+    border-radius: 20px;
 }
 
 a:hover{
     background-color: rgb(237, 236, 236);
-    border-radius: 20px;
+    transition: 0.5s;
 }
 
 .icon{
@@ -79,7 +80,7 @@ a:hover{
 }
 
 .span{
-    font-size: 20px; 
+    font-size: 22px; 
 }
 #time-3-icon {
     fill: rgb(29, 155, 240);;
@@ -104,10 +105,26 @@ a:hover{
 }
 
 .btn{
+    margin-top: 5px;
     padding: 5px;
 }
 
 .profil{
     position: relative;
     top: 40px;
+}
+
+.rond{
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    width:40px;
+    height:40px;
+}
+
+.profilw{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }

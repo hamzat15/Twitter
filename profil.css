@@ -1,0 +1,58 @@
+.back{
+    position: absolute;
+    width: 100rem;
+    height: 56rem;
+    background-color: black;
+    opacity: 50%;
+
+}
+.editee{
+    position: absolute;  
+    background-color: white;
+    border-radius: 20px;
+    width: 40%;
+    z-index: 50;
+    height: 60%;
+    border: solid 0.5px black;
+    font-size: 15px;
+    left: 400px; 
+    top: 50px;
+    padding: 10px;
+}
+
+.btnedit input{
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #1DA1F2;
+    color: #fff;
+    font-weight: bold;
+}
+
+.del{
+    margin-left: 5px;
+    background-color: #fff;
+    border: none;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.del:hover, .dell:hover{
+    background-color: #f2e1e1;
+    
+}
+
+form{
+    margin: 20px;
+}
